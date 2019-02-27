@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Piloto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header>
+            <h1>HTML/CSS/JS</h1>
+        </header>
+        <!--    <ul class="menu">
+                <li><a id="inicio" href="#inicio">Inicio</a></li>
+                <li><a id="ejercicios" href="#ejercicios">Ejercicios</a></li>                
+                <li><a href="#actividades">Actividades</a></li>
+            </ul>
+        -->
+        <div class="topnav">
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </div>
+        <div id="mostrar"></div>
+        
+        
+        <!-- columna 1 -->
+        <div class="row">
+            <div class="colum">
+                <h2>Column</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit.</p>
+            </div>
+        </div>
+        <!-- columna 2 -->        
+        <div class="row">
+            <div class="colum">
+                <h2>Column</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit.</p>
+            </div>
+        </div>      
+        <!-- columna 3 -->
+        <div class="row">
+            <div class="colum">
+                <h2>Column</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit.</p>
+            </div>
+        </div>
+        
+        
+        
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script>   
+            $("#mostrar").css("display", "none"); 
+            
+            $("#ejercicios").on('click', function () {
+            $("#mostrar").load("javascript.html");
+            $("#mostrar").fadeIn("slow");
+            $("#contenido").fadeOut("slow");
+        });
+        
+         $("#inicio").on('click', function () {           
+            $("#contenido").fadeIn("slow");
+            $("#mostrar").fadeOut("slow");
+        });
+            
+        </script>
+    </body>
+</html>
