@@ -10,59 +10,132 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-            hr {
-                width: 90%
+            * { box-sizing: border-box;
             }
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+           
             button {
               font-weight: bold;
               align-content: center;
               margin: 3px;
               padding: 5px;
-              background-color: #3333ff;
-              border-radius: 10px;
+              background-color: red;
+              border-radius: 10px solid;
               color: white;
             }
+           
+            .columna {
+                float:left;
+                width: 50%;                
+                padding: 10px;
+                border: 1px solid white;
+                height: 250px;
+            }
+            
+            .fila:after {
+                content: "";
+                display: table;
+                clear: both;                
+            }
+            #myImage {
+                float: left;
+                height: 100px;
+                width: auto; 
+                margin: 10px;
+            }           
+            
+            @media screen and (max-width: 600px){
+            .columna {
+                width: 100%;
+            }            
+        }
+        .topnav {
+            overflow: hidden;
+        }
+        .topnav a {
+            float: left;
+            display: block;
+            text-decoration: none;
+            padding: 10px;
+            text-align: center;            
+            font-size: 20px;
+        }        
+        .topnav a:hover {
+            background-color: red;
+        }        
+        .activo {                       
+            background-color: green;
+            color: white;
+        }        
         </style>
     </head>
-    <body id="fondo" style="background-color: #ffffff;">
-        <h2>Fecha con JS</h2>
-        <button type="button"
-                onclick="document.getElementById('fecha').innerHTML = Date()">
-            Mostrar fecha</button>
-        <p id="fecha"></p>
-                             
-        <hr/>
-        
-        <!--Cambiando el contenido de un html-->
-        <p id="democambiar">Javascript puede cambiar el contenido del HTML</p>
-        <button type="button" onclick='document.getElementById("democambiar").innerHTML 
+    <body id="fondo" style="background-color:black; color: white;">
+        <header>
+            <nav class="topnav">
+                <a href="#inicio" class="activo">Inicio</a> 
+                <a href="#menu2">Menu 2</a> 
+                <a href="#Menu3">Menu 3</a>                 
+            </nav>
+        </header>
+        <!-- FILA 1 -->
+        <!--Primera columna 1x1 -->
+        <div class="fila">
+            <div class="columna">
+                <h2>Fecha con JS</h2>
+                <button type="button" onclick="document.getElementById('fecha').innerHTML = Date()">
+                Mostrar fecha</button>
+                <p id="fecha"></p>                             
+            </div>
+            <!-- Columna 1x2 -->
+            <!--Cambiando el contenido de un html-->
+            <div class="columna">
+                <p id="democambiar">Javascript puede cambiar el contenido del HTML</p>
+                <button type="button" onclick='document.getElementById("democambiar").innerHTML 
                     = "Cambie con Javascriptt!"'>Click para cambiar el parrafo de arriba</button>
-        <hr/>
-        
-        <!-- Cambiando un atributo HTML -->
-        <p>JavaScript puede cambiar los atributos HTML.</p>
-        <p>En este caso javascript puede cambiar el valor src(source) atributo de una imagen.</p>
-        <button onclick="document.getElementById('myImage').src='img/foco1.gif'">Tengo una idea</button>
-        <img id="myImage" src="img/foco0.gif" style="width:100px">       
-        <button onclick="document.getElementById('myImage').src='img/foco0.gif'">No se me ocurre nada</button>
-        <hr/>   
-        
-        <!-- Aplicando estilo a un elemento HTML -->
-        <h2>Que mas puede hacer javascript?</h2>
-        <p id="cambiarcss">JavaScript puede cambiar el estilo de un elemento HTML.</p>
-        <button type="button" onclick="document.getElementById('cambiarcss').style.fontSize='35px'">
-            Click para aplicar un estilo al parrafo</button>
-        <hr/>
-        
-        <!-- Mostrando elementos ocultos -->
-        <h2>Que más puede hacer Javacript?</h2>
-        <p>JavaScript puede mostrar elementos HTML ocultos.</p>
-        <p id="demohide" style="display:none">Hola, estaba oculto!</p>
-        <button type="button" onclick="document.getElementById('demohide').style.display='block'">
-        Dame click</button>
-        <hr/>       
-        
-
-
+            </div>
+        </div>                   
+        <!-- FILA 2 -->
+        <div class="fila">
+            <!--Column 2x1 -->
+            <div class="columna">
+                <!-- Cambiando un atributo HTML -->
+                <p>JavaScript puede cambiar los atributos HTML.
+                    En este caso javascript puede cambiar el valor 
+                    src(source) atributo de una imagen.</p>
+                <img alt="foco apagado" id="myImage" src="img/foco0.gif">       
+                <button onclick="document.getElementById('myImage').src='img/foco1.gif'">Encender la luz                    prende</button>                
+                <button onclick="document.getElementById('myImage').src='img/foco0.gif'">Apagar la luz</button>
+            </div>
+            <!-- Coumna 2-1 -->
+            <div class="columna">                
+            <!-- Aplicando estilo a un elemento HTML -->
+              <h3>Que mas puede hacer javascript?</h3>
+                <p id="cambiarcss">JavaScript puede cambiar el estilo de un elemento HTML.</p>
+                <button type="button" onclick="document.getElementById('cambiarcss').style.color='rgb(255,100,30)'">
+                Click para aplicar un estilo al parrafo</button>
+            </div>
+        </div>        
+        <!-- FILA 3 -->
+        <!-- COLUMNA 3X1-->
+        <div class="fila">
+            <div class="columna"  >
+                <!-- Mostrando elementos ocultos -->
+                <h3>Que más puede hacer Javacript?</h3>
+                <p>JavaScript puede mostrar elementos HTML ocultos.</p>
+                <p id="demohide" style="display:none">Hola, estaba oculto!</p>
+                <button type="button" onclick="document.getElementById('demohide').style.display='block'">
+                    Dame click</button>                
+            </div>
+        <!-- COLUMNA 3X2-->    
+            <div class="columna"  >
+                <p>Relleno del div 3x2</p>    
+            </div>
+        </div>
+        <footer>
+            <p style="text-align: right;">Nicolas Fleitas</p>            
+        </footer>
     </body>
 </html>
