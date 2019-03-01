@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;    
+}
+.centrado {
+    text-align: center;    
+}
+
+.cabecera {
+    background-color: #818181;
+    overflow: auto;
+}
+
+.columna {
+    width: 33.33%;
+    float: left;    
+    margin: 0px;    
+}
+
+.span {
+    width: 20%;
+    
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input[type=text] {                                
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    resize: vertical;            
+}
+
+.botonBuscar {
+    width: 20%;    
+    border: 1px solid #ccc;    
+}
+
+input[type=text]#nro,#fecha_nacimiento {                                
+    width: 20%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px; 
+}
+
+.botones {
+    font-size: 20px;
+    background-color: #45a049;
+    border-radius: 15px;
+    margin: 5px 3px 5px 3px;
+    padding: 2px;
+}
+
+@media screen and (max-width:500px ) {
+    .columna {
+        width: 100%;
+        
+    }
+}

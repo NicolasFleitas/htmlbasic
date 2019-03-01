@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        * { 
+          box-sizing: border-box;
+        }
+        /*Creamos 4 columnas que floten una al lado de la otra */        
+        .column {
+          float: left;
+          width: 25%;
+          padding: 10px;         
+        }
+        
+        .row:after{
+          content: "";
+          display: table;
+          clear: both;          
+        }
+        
+       /*Diseño responsive*/        
+        @media screen and (max-width: 900px){
+            .column {
+                width: 50%;
+            }            
+        }        
+        @media screen and (max-width: 600px){
+            .column {
+                width: 100%;
+            }            
+        }
+        </style>
+    </head>    
+    <body>
+        <div class="row">
+            <div class="column" style="background:#aaa;">          
+                <h1>Columna 1</h1>
+                <p>Texto de ejemplo nro 1</p>
+            </div>
+
+            <div class="column" style="background:#bbb;">          
+                <h1>Columna 2</h1>
+                <p>Texto de ejemplo nro 2</p>
+            </div>
+            <div class="column" style="background:#ccc">
+                <h1>Columna 3</h1>                    
+                <p>Texto de ejemplo nro 3</p>
+            </div>
+            <div class="column" style="background:#ddd">
+                <h1>Columna 4</h1>                    
+                <p>Texto de ejemplo nro 4</p>
+            </div>
+
+        </div>        
+    </body>
+</html>

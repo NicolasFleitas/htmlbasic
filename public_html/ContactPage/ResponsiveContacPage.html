@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body { font-family: Arial, Helvetica, sans-serif;}
+            
+            * {
+                box-sizing: border-box;
+            }
+            
+            input[type=text], select, textarea{                                
+              width: 100%;
+              padding: 12px;
+              border: 1px solid #ccc;
+              margin-top: 6px;
+              margin-bottom: 16px;
+              resize: vertical;            
+            }
+            
+            input[type=submit] {
+              background-color: #4CAF50;
+              color: white;
+              padding: 12px 20px;
+              border: none;
+              cursor: pointer;
+            }
+            
+            input[type=submit]:hover {
+              background-color: #45a049;
+            }
+            .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 10px;
+            }
+            
+            .columna {
+                float: left;
+                width: 50%;
+                margin-top: 6px;
+                padding: 20px;
+            }
+
+            .row {
+                content: ""  ;
+                display: table;
+                clear: both;              
+            }
+
+            @media screen and (max-width:600px ){
+                .columna,input[type=submit] {
+                    width: 100%;
+                    margin-top:0;
+                }
+            }            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div style="text-align: center;">
+                <h2>Contáctenos</h2>
+                <p>Deje su mensaje y nos pondremos en contacto con usted</p>                
+            </div>
+
+            <div class="row">
+                <div class="columna">
+                    <img alt="" src="../img/map.jpg" style="width: 100%">
+                </div>
+                <!--**** -->
+                <div class="columna">
+                    <form action="/action_page.php">
+                        <label for="fname">Nombre</label>
+                        <input type="text" id="fname" name="nombre" placeholder="Escriba su nombre">                        
+                        <!--****** -->
+                        <label for="lname">Apellido</label>
+                        <input type="text" id="lname" name="apellido" placeholder="Escriba su apellido">
+                        <!--****** -->
+                        <label for="country">Pais</label>
+                        <select id="country">
+                            <option value="Paraguay">Paraguay</option>
+                            <option value="Brasil">Brasil</option>
+                            <option value="Uruguay">Uruguay</option>
+                            <option value="Peru">Perú</option>
+                        </select>                        
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="textarea" style="height:170px;" placeholder="Escriba algo...">
+                        </textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div> <!-- fin fila -->        
+        </div> 
+    </body>
+</html>
+
