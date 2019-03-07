@@ -1,10 +1,5 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
+* { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
 
 /* Style the header */
 header {
@@ -39,10 +34,10 @@ header {
 
 
 /*creo 3 columnas iguales que floten uno al lado de otra*/
-.colum {
+.columna {
   float: left;
-  width: 33.3%;
-  padding: 15px;
+  width: 33.33%;
+  padding: 1em;
 }
 
 /*Limpiar floats despues de las columnas*/
@@ -54,33 +49,7 @@ header {
 }
 
 @media screen and (max-width:600px) {
-    .colum {
+    .columna {
       width: 100%;
     }
 }
-
-/*
-ul.menu {  
-  list-style-type: none;
-  text-decoration: none;
-  overflow: hidden; Esconder si hay overflow
-  margin: 0; padding: 0;
-  background-color:#333;
-}
-
-ul.menu li { float: left; }
-ul.menu li a {
-  color: white;
-  display: block;
-  width: 100px;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-ul.menu li a:hover:not(.active) {background-color: #111;}
-ul.menu li a.active { background-color: #4CAF50; }
-ul.menu li { border-right: 1px solid #bbb; }
-ul.menu li:last-child { border-right: none; } 
-pseudo-elementos 
-
-/*/
