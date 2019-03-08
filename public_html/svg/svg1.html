@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Mi primer svg </h1>
+        <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />        
+        </svg>
+        <h2>Qué es SVG?</h2>
+        <ol type="I">
+            <li>SVG significa Scalable Vector Graphics</li>
+            <li>SVG se usa para definiar un grafico basado en vectores para la web</li>
+            <li>SVG define los gráficos en formato XML</li>
+            <li>Cada elemento y cada atributo en los archivos SVG pueden ser animados</li>
+            <li>Es una recomendación de W3C</li>
+            <li>SVG se integra con otros estándares W3C como DOM y XSL</li>
+        </ol>
+        <h2>Ventajas de SVG</h2>
+        <ol type="I">
+            <li>Las imágenes SVG se pueden crear y editar con cualquier editor de texto</li>
+            <li>Las imágenes SVG se puden buscar, indexar, crear secuencias de comando y comprimir</li>
+            <li>Las imágenes SVG son escalables</li>
+            <li>Las imágenes SVG se pueden imprimir con alta calidad en cualquier resolución</li>
+            <li>Las imágenes SVG son con zoom</li>
+            <li>Los gráficos SVG NO pierden ninguna calidad si se amplian o redimensionan</li>
+            <li>SVG es un estándar abierto</li>
+            <li>Los archivos SVG son XML puro</li>
+        </ol>            
+        <p>Su principal competidor es Flash</p>
+        <p>La myor ventaja que tiene SVG sobre Flash es el cumplimiento con otros estándares (por ejemplo, XSL y DOM) Flash se basa en tecnología patentada que no es de código abierto</p>
+        <p>Se pueden crear con cualquier editor de texto, pero es conveniente crearles con un programa de dibujo, como Inkscape. </p>        
+
+        <div id="capitulo-1">
+            <h1>SVG Rectangulo</h1>
+            <svg width="400" height="110">                
+            <rect width="300" height="100" style="fill:rgb(0,0,255); stroke-width:3; stroke:rgb(0,0,0)" />
+            </svg>
+            <p>E.g.2 Otro rectángulo con algunos atributos nuevos</p>
+
+            <svg width="400" height="180">
+            <rect x="50" y="20" width="150" height="150" style="fill:blue;stroke:pink;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" />
+            <!-- Sorry, your browser does not support inline SVG.   -->
+            </svg>
+            <p>E.g. 3 Opacidad para todo el elemento</p>
+            <svg width="400" height="180">
+            <rect x="50" y="20" width="150" height="150" style="fill:blue;stroke:pink;stroke-width:5;opacity:0.5" />
+            <!--Sorry, your browser does not support inline SVG.   -->
+            </svg>
+            <p>E.g. 4 Rectángulo con esquinas redondeadas</p>
+
+            <svg width="400" height="180">
+            <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+                  style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+            </svg>
+        </div>
+
+        <div id="capitulo-2">
+            <h1>SVG Circulo - &lt;circle&gt;</h1>
+            <p>E.g. 1  | cx y cy definen las coordenadas del centro, si se omiten son (0,0)</p>
+            <svg height="100" width="100">
+            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+            </svg>                                
+            <h1>SVG Ellipse</h1>
+            <p>E.g. 1 Ellipse &lt;ellipse &gt; | rx y ry definen el radio horizontal y vertical </p>
+            <svg height="140" width="500">
+            <ellipse cx="200" cy="80" rx="100" ry="50"
+                     style="fill:yellow;stroke:purple;stroke-width:2" />
+            </svg>
+            <p>E.g.2 </p>
+            <svg height="150" width="500">
+            <ellipse cx="240" cy="100" rx="220" ry="30" style="fill:purple" />
+            <ellipse cx="220" cy="70" rx="190" ry="20" style="fill:lime" />
+            <ellipse cx="210" cy="45" rx="170" ry="15" style="fill:yellow" />
+            </svg>
+
+            <p>E.g. 3 El siguiente ejemplo combina dos elipses (uno amarillo y otro blanco)</p>
+            <svg height="100" width="500">
+            <ellipse cx="240" cy="50" rx="220" ry="30" style="fill:yellow" />
+            <ellipse cx="220" cy="50" rx="190" ry="20" style="fill:white" />
+            </svg>
+        </div>
+
+        <div id="capitulo-3">
+            <h1>Lineas &lt;line&gt;</h1>                
+            <p>E.g. Crear una linea</p>
+            <svg height="210" width="500">
+            <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />
+            </svg>
+            <ul>
+                <li>x1 define el inicio de la linea en el eje-x</li>
+                <li>y2 define el inicio de la linea en el eje-y</li>
+                <li>x2 define el final de la linea en el eje-x</li>
+                <li>y2 define el final de la linea en el eje-y</li>
+            </ul>
+        </div>
+
+        <div id="capitulo-4">
+            <h1>SVG Polygon - &lt;polygon&gt;</h1>
+            <p>El elemento polygon es usado para crear un gráfico que tenga al menos 3 lados</p>
+            <p>Los poligonos estan formados por lineas rectas y la forma esta "cerrada" es decir todas las lineas se conectan</p>
+            <p>E.g.3. Poligono de 3 lados</p>
+            <svg height="210" width="500">
+            <polygon points="200,10 250,190 160,210" style="fill:lime;stroke:purple;stroke-width:1"/>
+            </svg>
+            <p>El atributo de puntos define las coordenadas x e y para cada esquina del poligono</p>
+
+            <p>E.g. 2 Poligono de cuatro lados</p>
+            <svg height="250" width="500">
+            <polygon points="220,10 300,210 170,250 123,234" style="fill:lime;stroke:purple;stroke-width:1" />
+            </svg>
+
+            <p>E.g. 3 Para crear una estrella con polygon</p>
+            <!--100,10 40.198 190.78 10.78 160.198  -->
+            <svg height="210" width="500">
+            <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:nonzero;"/>
+            </svg> 
+            <p>E.g. 4 Para crear una estrella - propiedad de fill : evenodd</p>
+            <!--100,10 40.198 190.78 10.78 160.198  -->
+            <svg height="210" width="500">
+            <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
+            </svg>
+        </div>
+
+        <div id="capitulo-5">
+            <h1>SVG Polyline - &lt;polyline&gt;</h1>
+            <p>E.g. 1 El elemento polyline se utiliza para crear cualquier forma que consiste solo en lineas rectas ( que estan conectadas en varios puntos )</p>
+
+            <svg height="200" width="500">
+            <polyline points="20,20 40,25 60,40 80,120 120,140 200,180" style="fill:none;stroke:black;stroke-width:3"/>
+            </svg>
+
+            <p>E.g. 2. Otro ejemplo con solo lineas rectas</p>
+            <svg height="180" width="500">
+            <polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160"
+                      style="fill:white;stroke:red;stroke-width:4"/>
+            </svg>
+        </div>
+        <div id="capitulo-6">
+            <h1>SVG Path</h1>            
+            <p>El elemento path es usaro para definar una ruta</p>
+            
+            <p>Los siguientes comandos estan disponibles para datos de ruta</p>
+            <ul>
+                <li>M = moveto</li>
+                <li>L = lineto</li>
+                <li>H = horizontal lineto</li>
+                <li>V = vertical lineto</li>
+                <li>C = curveto</li>
+                <li>S = smooth curveto</li>
+                <li>Q = quadratic Bezier curve</li>
+                <li>T = smooth quadratic Bezier curveto</li>
+                <li>A = elliptical Arc</li>
+                <li>Z = closepath</li>
+            </ul>
+            <p>NOTE: Todos los comandos mencionados tambien se pueden expresar en minusculas.
+                <br>Letras Capitales significa absolutamento posicionado.
+                <br>Minusculas significa relativamente posicionado</p>
+            <p>E.g.1 A continuacion define una ruta que comienza en la posicion 150,0 con una linea hasta la posicion 75,200, luego desde alli, una línea hasta 255,200 y, finalmente, cerrando la ruta nuevamente a 150,0:</p>
+
+            <svg height="210" width="400">
+            <path d="M150 0 L75 200 L255 200 Z" />
+            </svg>
+            <p>E.g.2 Las curvs Bézier se utilizan para modelar curvas suaves 
+                que se pueden escalar indefinidamente. En general
+            el usuario selecciona dos puntos finales y uno o dos puntos 
+            de control. Una curva de Bézier con un punto de control se llama una curva de Bézier cuadrática y 
+            la clase con dos puntos de control se llama cúbica</p>
+            <p>El siguiente ejemplo crea una curva de Bézier cuadrática, donde A y C son los puntos inicial y final, B es el punto de control</p>
+            
+            <svg height="400" width="450">
+            <path id="lineAB" d="M 100 350 l 150 -300" stroke="red"
+                  stroke-width="3" fill="none" />
+            <path id="lineBC" d="M 250 50 l 150 300" stroke="red"
+                  stroke-width="3" fill="none" />
+            <path d="M 175 200 l 150 0" stroke="green" stroke-width="3"
+                  fill="none" />
+            <path d="M 100 350 q 150 -300 300 0" stroke="blue" stroke-width="5" fill="none"/>
+            <!--Marcar puntos relevantes -->
+            <g stroke="black" stroke-width="3" fill="black">
+            <circle id="pointA" cx="100" cy="350" r="3" />
+            <circle id="pointB" cx="250" cy="50" r="3" />
+            <circle id="pointC" cx="400" cy="350" r="3" />
+            </g>
+            <!-- Etiqueta los puntos -->
+            <g font-size="30" font-family="sans-serif" fill="black" stroke="none" text-anchor="middle">
+            <text x="100" y="350" dx="-30">A</text>
+            <text x="250" y="50" dy="-10">B</text>
+            <text x="400" y="350" dx="30">C</text>
+            </g>
+            </svg>
+        </div>
+        
+        <div id="capitulo-7">
+            <h1>SVG &lt;text&gt;</h1>
+            <p>Se utiliza para definar un texto. Ejemplo: </p>
+            <svg height="30" width="200">
+            <text x="0" y="15" fill="red">I love SVG </text>
+            </svg>
+            <p>E.g.2 - Rotar un texto</p>
+            <svg height="80" width="200">
+            <text x="0" y="15" fill="red" transform="rotate(30 20,40)">
+            I love SVG rotated</text>
+            </svg>
+            <p>El elemento text se puede organizar en cualquier numero de subgrupos con el elmento &lt;tspan&gt; <br>
+                Cada elemento &lt;tspan&gt; puede contener diferentes formatos y posiciones </p>
+            <p>Texto en varias lineas ( con el elemento &lt;tspan&gt;<br>E.g. 3</p>
+            
+            <svg height="90" width="200">
+            <text x="10" y="20" style="fill:red;">Muchas lineas:
+            <tspan x="10" y="45">primera linea</tspan>
+            <tspan x="10" y="70">segunda linea </tspan>
+            </text>
+            </svg>
+            
+        </div>
+        
+    </body>
+</html>
+
